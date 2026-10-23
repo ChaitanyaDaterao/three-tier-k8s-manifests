@@ -18,6 +18,13 @@ spec:
       containers:
         - name: backend
           image: 191014622554.dkr.ecr.ap-south-1.amazonaws.com/three-tier-backend:8
+          resources:
+            requests:
+              cpu: 50m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
           ports:
             - containerPort: 3500
           env:
